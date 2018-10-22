@@ -15,19 +15,19 @@ const $ = function (selector) {
 
   const addClass = function(className){
     for (let i = 0; i < nodeList.length; i++) {
-      nodeList[i].classList.add(className);
+      nodeList[i].employeeList.add(className);
     }
   }
 
   const removeClass = function(className){
     for (let i = 0; i < nodeList.length; i++) {
-      nodeList[i].classList.remove(className);
+      nodeList[i].employeeList.remove(className);
     }
   }
 
   const toggleClass = function(className){
     for (let i = 0; i < nodeList.length; i++) {
-      nodeList[i].classList.toggle(className);
+      nodeList[i].employeeList.toggle(className);
     }
   }
 

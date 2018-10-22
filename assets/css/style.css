@@ -1,0 +1,15 @@
+body{
+    margin:20px;
+}
+
+div{
+    margin: 5px;
+    padding: 10px;
+}
+.btn-group-vertical{
+    width: auto;
+}
+
+.btn{
+    width: 69.28px;
+}

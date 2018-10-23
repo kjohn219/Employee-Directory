@@ -1,5 +1,5 @@
-const $ = function (selector) {
-  const nodeList = document.querySelectorAll(selector);
+const $ = function (body) {
+  const nodeList = document.querySelectorAll(body);
 
   const text = function(content){
     for (let i = 0; i < nodeList.length; i++) {
@@ -15,19 +15,19 @@ const $ = function (selector) {
 
   const addClass = function(className){
     for (let i = 0; i < nodeList.length; i++) {
-      nodeList[i].employeeList.add(className);
+      nodeList[i].classList.add(className);
     }
   }
 
   const removeClass = function(className){
     for (let i = 0; i < nodeList.length; i++) {
-      nodeList[i].employeeList.remove(className);
+      nodeList[i].classList.remove(className);
     }
   }
 
   const toggleClass = function(className){
     for (let i = 0; i < nodeList.length; i++) {
-      nodeList[i].employeeList.toggle(className);
+      nodeList[i].classList.toggle(className);
     }
   }
 

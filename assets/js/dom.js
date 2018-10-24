@@ -1,5 +1,5 @@
-const $ = function (body) {
-  const nodeList = document.querySelectorAll(body);
+const $ = function (selector) {
+  const nodeList = document.querySelectorAll(selector);
 
   const text = function(content){
     for (let i = 0; i < nodeList.length; i++) {

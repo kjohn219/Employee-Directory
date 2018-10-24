@@ -13,6 +13,7 @@
 
 <body>
   <h1>Please Make Your Selection</h1>
+  <!-- Buttons for view, add, verify, update, delete -->
   <div class="btn-group-vertical">
     <button type="button" class="btn1 btn-dark">View</button>
     <button type="button" class="btn2 btn-dark">Add</button>
@@ -25,67 +26,73 @@
     
   </ul>
 
+  <!-- Form to add Name, office Number, and Phone Number. Also has an Add button -->
   <form id="form1" class="">
     <div class="form-row">
       <div class="col-7">
-        <input type="text" class="form-control" placeholder="Name">
+        <input type="text" class="form-control" placeholder="Name" id="addName">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Office Number">
+        <input type="text" class="form-control" placeholder="Office Number" id="addON">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Phone Number">
+        <input type="text" class="form-control" placeholder="Phone Number" id="Number">
       </div>
       <div class="col-auto">
-        <button type="add" class="btn btn-primary mb-2">Add</button>
+        <button id="btnAdd" type="button" class="btn6 btn-primary mb-2">Add</button>
       </div>
     </div>
   </form>
 
+  <!-- Form to search for a name with a search button -->
   <form id="form2" class="">
     <div class="form-row">
       <div class="col-7">
-        <input type="text" class="form-control" placeholder="Name">
+        <input type="text" class="form-control" placeholder="Enter a Name(with first letter of name capital) you want to verify" id="searchName">
       </div>
       <div class="col-auto">
-        <button type="search" class="btn btn-primary mb-2">Search</button>
+        <button id= "btnSearch" type="button" class="btn7 btn-primary mb-2">Search</button>
       </div>
     </div>
   </form>
 
+  <!-- Form to update with Name, office number, and phone number with an update button -->
   <form id="form3" class="">
     <div class="form-row">
       <div class="col-7">
-        <input type="text" class="form-control" placeholder="Name">
+        <input type="text" class="form-control" placeholder="Name you want to update" id="updateName">
+      </div>
+      <div class="col-7">
+        <input type="text" class="form-control" placeholder="Name you want to update to" id="updateName">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Office Number">
+        <input type="text" class="form-control" placeholder="Office Number you want to update to" id="updateON">
       </div>
       <div class="col">
-        <input type="text" class="form-control" placeholder="Phone Number">
+        <input type="text" class="form-control" placeholder="Phone Number you want to update to" id="updatePhone">
       </div>
       <div class="col-auto">
-        <button type="update" class="btn btn-primary mb-2">Update</button>
+        <button id="btnUpdate" type="button" class="btn8 btn-primary mb-2">Update</button>
       </div>
     </div>
   </form>
 
+  <!-- Form to delete a name with a delete button -->
   <form id="form4" class="">
     <div class="form-row">
       <div class="col-7">
-        <input type="text" class="form-control" placeholder="Name">
+        <input type="text" class="form-control" placeholder="Enter a name you want to delete" id="deleteName">
       </div>
       <div class="col-auto">
-        <button type="delete" class="btn btn-primary mb-2">Delete</button>
+        <button id="btnDelete" type="button" class="btn9 btn-primary mb-2">Delete</button>
       </div>
     </div>
   </form>
 
-  <script src="./assets/js/dom.js"></script>
-  <script src="./assets/js/app.js"></script>
-  <script src="./assets/js/employeeList.js"></script>
-
   
+  <script src="./assets/js/dom.js"></script>
+  <script src="./assets/js/employeeList.js"></script>
+  <script src="./assets/js/app.js"></script>
 
 </body>
 

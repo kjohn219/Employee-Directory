@@ -86,7 +86,7 @@ $('#btnAdd').on('click', function () {
 });
 
 
-//onClick verify name
+
 
 function findObjectByName(array, key, value) {
     for (var i = 0; i < array.length; i++) {
@@ -97,12 +97,14 @@ function findObjectByName(array, key, value) {
     return null;
 }
 
+//onClick verify name
 const verifyList = function () {
     const searchVal = $('#searchName').val();
     const results = findObjectByName(employeeList, "name", searchVal)
 
     if (results) {
-        $('.List').text('Yes')
+        employeeList.splice(i, 1, '#updateName');
+        alert(employeeList);
     }
     else {
         $('.List').text('No')
@@ -117,11 +119,12 @@ $('#btnSearch').on('click', verifyList)
 const updateList = function () {
     const searchUpdateVal = $('#updateName').val();
     const resultsUpdates = findObjectByName(employeeList, "name", searchUpdateVal)
-    if (resultsUpdate) {
-        $('.List').text('Yes')
+    if (resultsUpdates) {
+        employeeList.splice()
+        $('.List').text('yes')
     }
     else {
-        $('.List').text('There is no person by that name')
+        $('.List').text('There is no person by that name to Update')
     }
 }
 $('#btnSearch').on('click', updateList)
@@ -132,7 +135,9 @@ const deleteList = function () {
     const searchDeleteVal = $('#deleteName').val();
     const resultsDelete = findObjectByName(employeeList, "name", searchDeleteVal)
     if (resultsDelete) {
-        $('.List').text('Yes')
+        const pos = employeeList.indexOf(resultsDelete);
+        employeeList.splice(pos, 1);
+        alert(employeeList);
     }
     else {
         $('.List').text('There is no person by that name')
